@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ajex — Websites, Branding &amp; Online Visibility for Small Businesses</title>
+<meta name="description" content="Ajex Digital Growth Agency builds premium websites, brand identities, and online visibility for small businesses. Fixed pricing, direct access, fast turnaround.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://heisajay.github.io/Ajex--website/">
+<meta name="theme-color" content="#2B4DA8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%232B4DA8'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23F2EFE6' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ajex Digital Growth Agency — Websites, Branding & Online Visibility">
+<meta property="og:description" content="Premium websites, brand identities, and online visibility for small businesses — fixed pricing, direct access, fast turnaround.">
+<meta property="og:url" content="https://heisajay.github.io/Ajex--website/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajex Digital Growth Agency — Websites, Branding & Online Visibility">
+<meta name="twitter:description" content="Premium websites, brand identities, and online visibility for small businesses — fixed pricing, direct access, fast turnaround.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+<style>
+  :root {
+    --paper: #F2EFE6;
+    --paper-line: #C9D3E4;
+    --ink: #16202E;
+    --ink-soft: #4B5768;
+    --blue: #2B4DA8;
+    --blue-soft: #E6EBF9;
+    --amber: #DB932A;
+    --amber-ink: #6E4A13;
+    --card: #FBFAF6;
+    --border: rgba(22,32,46,0.16);
+    --radius-s: 2px;
+    --maxw: 1120px;
+
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-sizing: border-box;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12161C;
+      --paper-line: #29354A;
+      --ink: #ECEAE1;
+      --ink-soft: #A9AEB8;
+      --blue: #88A6E8;
+      --blue-soft: #1B2534;
+      --amber: #E4A644;
+      --amber-ink: #F2D8A6;
+      --card: #171B22;
+      --border: rgba(236,234,225,0.14);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12161C;
+    --paper-line: #29354A;
+    --ink: #ECEAE1;
+    --ink-soft: #A9AEB8;
+    --blue: #88A6E8;
+    --blue-soft: #1B2534;
+    --amber: #E4A644;
+    --amber-ink: #F2D8A6;
+    --card: #171B22;
+    --border: rgba(236,234,225,0.14);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+
+  /* ---------- Motion ---------- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes drawIn { to { stroke-dashoffset: 0; } }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%      { transform: scale(1.5); opacity: .55; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--d, 0s);
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size: 42px 42px;
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  /* Cursor-following glow on the blueprint grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity .4s ease;
+    background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), var(--blue-soft) 0%, transparent 70%);
+  }
+  body.glow-ready::before { opacity: .55; }
+  header, main, footer { position: relative; z-index: 1; }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+  }
+
+  .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 20;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .logo .dot { color: var(--amber); font-size: 20px; }
+  nav.links { display: flex; gap: 28px; }
+  nav.links a {
+    text-decoration: none;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    transition: color .15s ease;
+  }
+  nav.links a:hover { color: var(--ink); }
+  .nav-cta {
+    font-size: 14px;
+    padding: 9px 16px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-s);
+    text-decoration: none;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .nav-cta { transition: background-color .22s ease, color .22s ease; }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  .skip-link {
+    position: absolute;
+    top: -48px;
+    left: 12px;
+    z-index: 100;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 16px;
+    border-radius: var(--radius-s);
+    text-decoration: none;
+    font-size: 14px;
+    transition: top .2s ease;
+  }
+  .skip-link:focus { top: 12px; }
+
+  .menu-btn {
+    display: none;
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-s);
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+    background: var(--paper);
+  }
+  .mobile-nav.is-open { display: flex; }
+  .mobile-nav a {
+    padding: 14px 28px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+
+  .theme-toggle { background: none; border: none; padding: 0; cursor: pointer; line-height: 0; }
+  .theme-toggle-track {
+    display: inline-flex;
+    align-items: center;
+    width: 46px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--blue-soft);
+    padding: 2px;
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .theme-toggle-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber-ink);
+    transform: translateX(0);
+    transition: transform .3s cubic-bezier(.22,.61,.36,1), color .3s ease;
+  }
+  :root[data-theme="dark"] .theme-toggle-thumb { transform: translateX(20px); color: var(--blue); }
+  .theme-toggle-thumb .icon-moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle-thumb .icon-sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle-thumb .icon-moon { display: block; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 96px 0 80px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 5px 10px 5px 8px;
+    border-radius: 999px;
+    margin-bottom: 26px;
+  }
+  .kicker .tick { width: 6px; height: 6px; background: var(--amber); border-radius: 50%; display:inline-block; animation: pulse 2.2s ease-in-out infinite; }
+  .kicker { min-width: 258px; }
+  .typed-cursor { color: var(--amber); }
+
+  .hero .kicker, .hero h1, .hero .hero-sub, .hero .hero-actions, .hero .diagram {
+    opacity: 0;
+    animation: fadeUp .8s cubic-bezier(.22,.61,.36,1) forwards;
+  }
+  .hero .kicker { animation-delay: .05s; }
+  .hero h1 { animation-delay: .16s; }
+  .hero .hero-sub { animation-delay: .3s; }
+  .hero .hero-actions { animation-delay: .44s; }
+  .hero .diagram { animation-delay: .26s; }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 5.4vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 22px;
+    max-width: 12ch;
+  }
+  h1 em { font-style: italic; color: var(--blue); }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 34px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn-primary {
+    background: var(--blue);
+    color: #FBFAF6;
+    padding: 14px 24px;
+    border-radius: var(--radius-s);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    transition: transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s ease;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -8px rgba(30,58,110,0.45); }
+  .btn-ghost {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    transition: border-color .2s ease, opacity .2s ease;
+  }
+  .btn-ghost:hover { opacity: .7; }
+
+  /* Blueprint diagram */
+  .diagram {
+    position: relative;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius-s);
+  }
+  .diagram svg { width: 100%; height: 100%; }
+  .diagram svg [data-draw] {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: drawIn 1.3s cubic-bezier(.5,0,.3,1) forwards;
+    animation-delay: var(--dd, .9s);
+  }
+
+  /* ---------- Section shell ---------- */
+  section { padding: 88px 0; border-top: 1px solid var(--border); }
+  .sec-head { max-width: 640px; margin-bottom: 52px; }
+  .sec-head .label { display: block; margin-bottom: 14px; }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+  .sec-head p { color: var(--ink-soft); font-size: 16.5px; margin: 0; max-width: 56ch; }
+
+  /* ---------- Services ---------- */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+  .service {
+    padding: 34px 30px;
+    border-right: 1px solid var(--border);
+    position: relative;
+    background: var(--card);
+    transition: transform .3s cubic-bezier(.22,.61,.36,1), box-shadow .3s ease;
+  }
+  .service:last-child { border-right: none; }
+  .service:hover { transform: translateY(-5px); box-shadow: 0 14px 26px -18px rgba(22,32,46,0.35); }
+  .service .num { transition: background-color .25s ease; }
+  .service:hover .num { background: var(--amber); color: #241704; }
+  .service .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--amber-ink);
+    background: var(--blue-soft);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
+  .service h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 0 12px;
+  }
+  .service p { color: var(--ink-soft); font-size: 15px; margin: 0 0 18px; }
+  .service .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .service .tags span {
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--ink-soft);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: var(--radius-s);
+  }
+
+  /* ---------- Marquee ticker ---------- */
+  .marquee {
+    overflow: hidden;
+    background: var(--ink);
+    padding: 13px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 26s linear infinite;
+  }
+  .marquee-track span {
+    white-space: nowrap;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: var(--paper);
+    opacity: .85;
+    padding: 0 26px;
+    position: relative;
+  }
+  .marquee-track span::after {
+    content: '—';
+    position: absolute;
+    right: -3px;
+    color: var(--amber);
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ---------- Bento showcase ---------- */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    gap: 16px;
+  }
+  .bento-tile {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius-s);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform .3s cubic-bezier(.22,.61,.36,1), box-shadow .3s ease, border-color .3s ease;
+  }
+  .bento-tile:hover { transform: translateY(-4px); box-shadow: 0 14px 26px -18px rgba(22,32,46,0.35); border-color: var(--blue); }
+  .bento-tile .label { display: block; margin-bottom: 10px; }
+  .bento-tile h3 { font-family: 'Fraunces', serif; font-weight: 500; margin: 0 0 8px; }
+  .bento-tile p { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+  .bento-big { grid-column: span 2; grid-row: span 2; background: var(--blue); border-color: var(--blue); }
+  .bento-big .label { color: rgba(251,250,246,0.72); }
+  .bento-big h3 { color: #FBFAF6; font-size: 24px; }
+  .bento-big p { color: rgba(251,250,246,0.82); }
+  .bento-wide { grid-column: span 2; }
+
+
+  /* ---------- Example builds ---------- */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .work-card {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius-s);
+    overflow: hidden;
+    transition: transform .3s cubic-bezier(.22,.61,.36,1), box-shadow .3s ease;
+  }
+  .work-card:hover { transform: translateY(-5px); box-shadow: 0 14px 26px -18px rgba(22,32,46,0.35); }
+  .work-thumb { aspect-ratio: 4/3; border-bottom: 1px solid var(--border); background: var(--paper); }
+  .work-thumb svg { width: 100%; height: 100%; display: block; }
+  .work-meta { padding: 18px 20px 22px; }
+  .work-meta .label { display: block; margin-bottom: 6px; }
+  .work-meta h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; margin: 0 0 8px; }
+  .work-meta p { color: var(--ink-soft); font-size: 14px; margin: 0; }
+
+  /* ---------- Process ---------- */
+  .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .step {
+    padding: 0 26px 0 0;
+    border-left: 1px dashed var(--border);
+    padding-left: 26px;
+    position: relative;
+  }
+  .step:first-child { border-left: none; padding-left: 0; }
+  .step .mark {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--blue);
+    margin-bottom: 16px;
+    display: block;
+    transition: transform .25s cubic-bezier(.22,.61,.36,1);
+  }
+  .step:hover .mark { transform: translateX(4px); }
+  .step h4 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; margin: 0 0 10px; }
+  .step p { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .about-card {
+    border: 1px solid var(--border);
+    background: var(--card);
+    padding: 28px;
+    border-radius: var(--radius-s);
+    transition: box-shadow .3s ease, transform .3s cubic-bezier(.22,.61,.36,1);
+  }
+  .about-card:hover { transform: translateY(-3px); box-shadow: 0 14px 26px -18px rgba(22,32,46,0.3); }
+  .about-card .label { margin-bottom: 16px; display:block; }
+  .stat-row { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--border); }
+  .stat-row:first-of-type { border-top: none; }
+  .stat-row .k { color: var(--ink-soft); font-size: 14px; }
+  .stat-row .v { font-family: 'IBM Plex Mono', monospace; font-size: 14px; }
+  .about-copy p { font-size: 16.5px; color: var(--ink-soft); max-width: 62ch; margin: 0 0 18px; }
+  .about-copy p strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- CTA / Contact ---------- */
+  .cta {
+    border: 1px solid var(--border);
+    background: var(--blue);
+    color: #FBFAF6;
+    padding: 64px 56px;
+    border-radius: var(--radius-s);
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .cta h2 { color: #FBFAF6; }
+  .cta .label { color: rgba(251,250,246,0.7); }
+  .cta p { color: rgba(251,250,246,0.82); font-size: 16px; max-width: 44ch; }
+  .contact-options { display: flex; flex-direction: column; gap: 12px; }
+  .contact-options textarea {
+    background: rgba(251,250,246,0.08);
+    border: 1px solid rgba(251,250,246,0.35);
+    border-radius: var(--radius-s);
+    padding: 12px 14px;
+    color: #FBFAF6;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14.5px;
+    resize: vertical;
+    transition: border-color .2s ease, background-color .2s ease;
+  }
+  .contact-options textarea::placeholder { color: rgba(251,250,246,0.5); }
+  .contact-options textarea:focus { border-color: var(--amber); background: rgba(251,250,246,0.14); outline: none; }
+  .btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 18px;
+    border-radius: var(--radius-s);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s cubic-bezier(.22,.61,.36,1), box-shadow .2s ease;
+  }
+  .btn-contact.whatsapp { background: var(--amber); color: #241704; }
+  .btn-contact.whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -8px rgba(217,142,43,0.5); }
+  .btn-contact.email { background: rgba(251,250,246,0.08); color: #FBFAF6; border: 1px solid rgba(251,250,246,0.35); }
+  .btn-contact.email:hover { transform: translateY(-2px); background: rgba(251,250,246,0.14); }
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 0;
+  }
+  .foot-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .foot-row .label { color: var(--ink-soft); }
+  .foot-links { display: flex; gap: 20px; }
+  .foot-links a { font-size: 14px; color: var(--ink-soft); text-decoration: none; }
+  .foot-links a:hover { color: var(--ink); }
+
+  /* ---------- Floating WhatsApp button ---------- */
+  .whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px -8px rgba(0,0,0,0.35);
+    z-index: 50;
+    text-decoration: none;
+    transition: transform .2s cubic-bezier(.22,.61,.36,1), box-shadow .2s ease;
+  }
+  .whatsapp-float:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 28px -8px rgba(0,0,0,0.4); }
+
+  /* ---------- overflow safety for wide content ---------- */
+  .scroll-x { overflow-x: auto; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 880px) {
+    nav.links { display: none; }
+    .menu-btn { display: inline-flex; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .diagram { max-width: 340px; margin: 0 auto; }
+    .services { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .bento-big, .bento-wide { grid-column: span 1; }
+    .bento-tile { min-height: 130px; }
+    .service { border-right: none; border-bottom: 1px solid var(--border); }
+    .service:last-child { border-bottom: none; }
+    .process { grid-template-columns: 1fr 1fr; row-gap: 30px; }
+    .step:nth-child(3) { border-left: none; padding-left: 0; }
+    .about-grid { grid-template-columns: 1fr; }
+    .cta { grid-template-columns: 1fr; padding: 40px 26px; }
+  }
+  @media (max-width: 520px) {
+    .process { grid-template-columns: 1fr; }
+    .step { border-left: none; padding-left: 0; border-top: 1px dashed var(--border); padding-top: 20px; }
+    .step:first-child { border-top: none; padding-top: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header>
+  <div class="nav">
+    <div class="logo">Ajex<span class="dot">.</span></div>
+    <nav class="links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch between light and dark mode" aria-pressed="false">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </span>
+      </button>
+      <a class="nav-cta" href="#contact">Start your project</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="1" y1="4" x2="17" y2="4"/><line x1="1" y1="9" x2="17" y2="9"/><line x1="1" y1="14" x2="17" y2="14"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="hero" style="border-top:none; padding-top:64px;">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker"><span class="tick"></span><span id="typed-kicker"></span></span>
+        <h1>Websites and brand identities built to earn trust<em>.</em></h1>
+        <p class="hero-sub">Ajex is a digital growth agency for small businesses — premium web design, brand identity, and online visibility, planned clearly and delivered without agency bloat.</p>
+        <div class="hero-actions">
+          <a class="btn-primary magnetic" href="#contact">Start your project</a>
+          <a class="btn-ghost" href="#work">See our work</a>
+        </div>
+      </div>
+      <div class="diagram" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none">
+          <rect x="40" y="40" width="320" height="320" stroke="var(--paper-line)" stroke-width="1"/>
+          <line x1="40" y1="120" x2="360" y2="120" stroke="var(--border)" stroke-width="1"/>
+          <rect x="60" y="64" width="140" height="14" rx="2" fill="var(--blue-soft)" stroke="var(--blue)" stroke-width="1" pathLength="1" data-draw style="--dd:.7s"/>
+          <rect x="60" y="90" width="80" height="10" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+          <rect x="60" y="150" width="130" height="90" rx="2" fill="var(--card)" stroke="var(--blue)" stroke-width="1.4" pathLength="1" data-draw style="--dd:.9s"/>
+          <rect x="205" y="150" width="95" height="90" rx="2" fill="var(--card)" stroke="var(--border)" stroke-width="1"/>
+          <circle cx="103" cy="182" r="14" fill="none" stroke="var(--amber)" stroke-width="1.6" pathLength="1" data-draw style="--dd:1.15s"/>
+          <line x1="60" y1="215" x2="180" y2="215" stroke="var(--border)" stroke-width="1"/>
+          <line x1="60" y1="228" x2="150" y2="228" stroke="var(--border)" stroke-width="1"/>
+          <rect x="60" y="264" width="240" height="36" rx="2" fill="none" stroke="var(--blue)" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <text x="72" y="286" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-soft)">CTA — “Get started”</text>
+          <g stroke="var(--amber)" stroke-width="1">
+            <line x1="40" y1="312" x2="360" y2="312" pathLength="1" data-draw style="--dd:1.3s"/>
+            <line x1="40" y1="306" x2="40" y2="318"/>
+            <line x1="360" y1="306" x2="360" y2="318"/>
+          </g>
+          <text x="180" y="332" font-family="IBM Plex Mono" font-size="10.5" fill="var(--ink-soft)" text-anchor="middle">1200px</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>BUILD.</span><span>BE SEEN.</span><span>GROW.</span><span>WEB DESIGN</span><span>BRAND IDENTITY</span><span>ONLINE VISIBILITY</span>
+      <span>BUILD.</span><span>BE SEEN.</span><span>GROW.</span><span>WEB DESIGN</span><span>BRAND IDENTITY</span><span>ONLINE VISIBILITY</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">/// SERVICES</span>
+        <h2>Three ways we get you found and chosen</h2>
+        <p>Pick one to start, or bundle them — most clients begin with a site and grow into brand and visibility work once the foundation is set.</p>
+      </div>
+      <div class="services scroll-x">
+        <div class="service reveal" style="--d:0s">
+          <span class="num">01</span>
+          <h3>Web design &amp; build</h3>
+          <p>A fast, mobile-ready site built around what your customers actually need to do — book, buy, or call. No bloated templates.</p>
+          <div class="tags"><span>Design</span><span>Build</span><span>Hosting setup</span></div>
+        </div>
+        <div class="service reveal" style="--d:.12s">
+          <span class="num">02</span>
+          <h3>Brand &amp; identity</h3>
+          <p>Name, logo, color and type system that hold up across your site, socials, and print — so every touchpoint looks like one business.</p>
+          <div class="tags"><span>Naming</span><span>Logo</span><span>Brand kit</span></div>
+        </div>
+        <div class="service reveal" style="--d:.24s">
+          <span class="num">03</span>
+          <h3>Online visibility</h3>
+          <p>Google Business Profile, local SEO basics, and a social presence set up correctly from day one — so people can actually find you.</p>
+          <div class="tags"><span>SEO basics</span><span>GBP setup</span><span>Socials</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">/// WHY AJEX</span>
+        <h2>How we're built to work with you</h2>
+      </div>
+      <div class="bento">
+        <div class="bento-tile bento-big reveal" style="--d:0s">
+          <span class="label">01</span>
+          <h3>A blueprint before a single pixel</h3>
+          <p>We map the plan with you before building, so nothing gets built that wasn't agreed on first.</p>
+        </div>
+        <div class="bento-tile reveal" style="--d:.1s">
+          <span class="label">02</span>
+          <h3>Mobile-first</h3>
+          <p>Every build is designed for the small screen first, not adapted after the fact.</p>
+        </div>
+        <div class="bento-tile reveal" style="--d:.18s">
+          <span class="label">03</span>
+          <h3>Fixed pricing</h3>
+          <p>You know the cost upfront — no surprise line items at the end.</p>
+        </div>
+        <div class="bento-tile bento-wide reveal" style="--d:.26s">
+          <span class="label">04</span>
+          <h3>Direct access, no hand-offs</h3>
+          <p>You talk to the person actually building your site — not an account manager relaying messages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">/// EXAMPLE BUILDS</span>
+        <h2>Three concept builds, styled to the business</h2>
+        <p>These are concept mockups built to show range, not live client work — a preview of how we'd approach three different kinds of small businesses.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-card reveal" style="--d:0s">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" fill="none" aria-hidden="true">
+              <rect width="400" height="300" fill="var(--card)"/>
+              <rect x="0" y="0" width="400" height="34" fill="var(--paper)" stroke="var(--border)" stroke-width="1"/>
+              <circle cx="24" cy="17" r="6" fill="none" stroke="var(--blue)" stroke-width="1.3"/>
+              <path d="M19 17a5 5 0 0 1 10 0" stroke="var(--blue)" stroke-width="1.3" fill="none"/>
+              <rect x="300" y="11" width="80" height="12" rx="2" fill="var(--blue)"/>
+              <rect x="30" y="70" width="160" height="10" fill="var(--blue-soft)" stroke="var(--blue)" stroke-width="1"/>
+              <rect x="30" y="92" width="110" height="7" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="30" y="118" width="90" height="26" rx="2" fill="var(--amber)"/>
+              <rect x="230" y="60" width="140" height="100" rx="2" fill="none" stroke="var(--blue)" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <circle cx="300" cy="100" r="18" fill="none" stroke="var(--blue)" stroke-width="1.3"/>
+              <path d="M292 100q8-14 16 0" stroke="var(--blue)" stroke-width="1.3" fill="none"/>
+              <rect x="30" y="190" width="100" height="70" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="150" y="190" width="100" height="70" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="270" y="190" width="100" height="70" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="work-meta">
+            <span class="label">CAFÉ &amp; ROASTERY</span>
+            <h3>Maple &amp; Bean Coffee Co.</h3>
+            <p>Menu-forward homepage with online ordering CTA and a warm, editorial feel.</p>
+          </div>
+        </div>
+        <div class="work-card reveal" style="--d:.12s">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" fill="none" aria-hidden="true">
+              <rect width="400" height="300" fill="var(--card)"/>
+              <rect x="0" y="0" width="400" height="34" fill="var(--paper)" stroke="var(--border)" stroke-width="1"/>
+              <path d="M18 24c0-10 6-16 6-16s6 6 6 16" stroke="var(--blue)" stroke-width="1.3" fill="none"/>
+              <rect x="300" y="11" width="80" height="12" rx="2" fill="var(--blue)"/>
+              <rect x="30" y="64" width="190" height="12" fill="var(--blue-soft)" stroke="var(--blue)" stroke-width="1"/>
+              <rect x="30" y="88" width="130" height="7" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="30" y="112" width="100" height="26" rx="2" fill="var(--amber)"/>
+              <rect x="30" y="170" width="105" height="86" rx="2" fill="none" stroke="var(--blue)" stroke-width="1.2"/>
+              <rect x="147" y="170" width="105" height="86" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="264" y="170" width="105" height="86" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <path d="M70 215c6-14 18-14 24 0" stroke="var(--blue)" stroke-width="1.3" fill="none"/>
+              <path d="M188 215c6-14 18-14 24 0" stroke="var(--border)" stroke-width="1.3" fill="none"/>
+              <path d="M305 215c6-14 18-14 24 0" stroke="var(--border)" stroke-width="1.3" fill="none"/>
+            </svg>
+          </div>
+          <div class="work-meta">
+            <span class="label">HOME &amp; OUTDOOR SERVICES</span>
+            <h3>Greenline Landscaping</h3>
+            <p>Service-area grid, before/after gallery layout, and a quote-request form above the fold.</p>
+          </div>
+        </div>
+        <div class="work-card reveal" style="--d:.24s">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 300" fill="none" aria-hidden="true">
+              <rect width="400" height="300" fill="var(--card)"/>
+              <rect x="0" y="0" width="400" height="34" fill="var(--paper)" stroke="var(--border)" stroke-width="1"/>
+              <path d="M22 10v8m-5-4h10" stroke="var(--blue)" stroke-width="1.3"/>
+              <path d="M17 18l5 6 5-6" stroke="var(--blue)" stroke-width="1.3" fill="none"/>
+              <rect x="300" y="11" width="80" height="12" rx="2" fill="var(--blue)"/>
+              <rect x="150" y="56" width="100" height="10" fill="var(--blue-soft)" stroke="var(--blue)" stroke-width="1"/>
+              <rect x="128" y="78" width="144" height="7" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="160" y="100" width="80" height="24" rx="2" fill="var(--amber)"/>
+              <rect x="40" y="150" width="80" height="110" rx="2" fill="none" stroke="var(--blue)" stroke-width="1.2"/>
+              <rect x="160" y="150" width="80" height="110" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <rect x="280" y="150" width="80" height="110" rx="2" fill="none" stroke="var(--border)" stroke-width="1"/>
+              <path d="M70 175v55m10-55v55" stroke="var(--blue)" stroke-width="1"/>
+              <path d="M190 175v55m10-55v55" stroke="var(--border)" stroke-width="1"/>
+              <path d="M310 175v55m10-55v55" stroke="var(--border)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="work-meta">
+            <span class="label">FASHION &amp; RETAIL</span>
+            <h3>Amara Studio</h3>
+            <p>Centered, editorial layout built for a lookbook-style product grid and brand storytelling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">/// HOW IT WORKS</span>
+        <h2>From first call to live site, in four steps</h2>
+      </div>
+      <div class="process">
+        <div class="step reveal" style="--d:0s">
+          <span class="mark">01 — Discover</span>
+          <h4>We learn your business</h4>
+          <p>A short call to understand who your customers are and what they need to see to trust you.</p>
+        </div>
+        <div class="step reveal" style="--d:.1s">
+          <span class="mark">02 — Draft</span>
+          <h4>We plan the structure</h4>
+          <p>A simple sitemap and content plan, so nothing gets built before it's agreed on.</p>
+        </div>
+        <div class="step reveal" style="--d:.2s">
+          <span class="mark">03 — Build</span>
+          <h4>We design and build</h4>
+          <p>You review drafts along the way — no surprise reveal at the end.</p>
+        </div>
+        <div class="step reveal" style="--d:.3s">
+          <span class="mark">04 — Launch</span>
+          <h4>We go live and hand off</h4>
+          <p>Site goes live, visibility basics are set up, and you get a walkthrough of how to update it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-card reveal">
+        <span class="label">/// WHAT'S INCLUDED</span>
+        <div class="stat-row"><span class="k">Target timeline</span><span class="v">2 weeks</span></div>
+        <div class="stat-row"><span class="k">Best fit for</span><span class="v">1–20 person teams</span></div>
+        <div class="stat-row"><span class="k">Revisions included</span><span class="v">2 rounds</span></div>
+        <div class="stat-row"><span class="k">Support after launch</span><span class="v">30 days</span></div>
+      </div>
+      <div class="about-copy reveal" style="--d:.12s">
+        <span class="label" style="display:block; margin-bottom:16px;">/// ABOUT AJEX</span>
+        <h2 style="margin-bottom:18px;">Built for businesses that got by on word of mouth — until that stopped being enough</h2>
+        <p><strong>Ajex exists for the business owner who's great at what they do but has never had the time, budget, or patience for a big agency process.</strong> We keep things small on purpose: fewer meetings, clearer plans, and a build you can actually follow along with.</p>
+        <p>Every project starts from the same question — what does someone need to see in the first ten seconds to trust this business? — and works backward from there.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-bottom:100px;">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div>
+          <span class="label">/// START A PROJECT</span>
+          <h2>Tell us what you're building</h2>
+          <p>Reach out directly on WhatsApp or email — whichever's easier. Add a line about your business below and it'll carry over into your message.</p>
+        </div>
+        <div class="contact-options">
+          <label for="brief" class="sr-only">Optional project brief</label>
+          <textarea id="brief" placeholder="Optional: a line or two about your business and what you need" rows="3"></textarea>
+          <a id="whatsapp-link" class="btn-contact whatsapp magnetic" href="https://wa.me/2349037616671?text=Hi%20Ajex%2C%20I%27d%20like%20to%20talk%20about%20my%20project." target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.04 3 8.9 8.9 0 0 0 3.2 11.9a8.8 8.8 0 0 0 1.2 4.5L3 21l4.7-1.2a8.9 8.9 0 0 0 4.3 1.1h.03a8.9 8.9 0 0 0 8.9-8.9 8.8 8.8 0 0 0-2.63-6.3zm-5.56 13.7h-.02a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.73.75-2.73-.18-.28a7.4 7.4 0 0 1-1.13-3.94 7.4 7.4 0 0 1 7.4-7.4 7.4 7.4 0 0 1 7.4 7.42 7.4 7.4 0 0 1-7.38 7.39zm4.05-5.54c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.1-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.59.28-.2.22-.78.76-.78 1.86s.8 2.16.91 2.31c.11.15 1.57 2.4 3.8 3.36.53.23.94.37 1.27.47.53.17 1.02.14 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.26z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a id="email-link" class="btn-contact email magnetic" href="mailto:adelekejoshuan1@gmail.com?subject=Project%20enquiry%20via%20Ajex%20website">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            Email us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span class="label">© 2026 AJEX — BUILD. BE SEEN. GROW.</span>
+    <div class="foot-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float magnetic" href="https://wa.me/2349037616671?text=Hi%20Ajex%2C%20I%27d%20like%20to%20talk%20about%20my%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with Ajex on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.04 3 8.9 8.9 0 0 0 3.2 11.9a8.8 8.8 0 0 0 1.2 4.5L3 21l4.7-1.2a8.9 8.9 0 0 0 4.3 1.1h.03a8.9 8.9 0 0 0 8.9-8.9 8.8 8.8 0 0 0-2.63-6.3zm-5.56 13.7h-.02a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.73.75-2.73-.18-.28a7.4 7.4 0 0 1-1.13-3.94 7.4 7.4 0 0 1 7.4-7.4 7.4 7.4 0 0 1 7.4 7.42 7.4 7.4 0 0 1-7.38 7.39zm4.05-5.54c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.1-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.59.28-.2.22-.78.76-.78 1.86s.8 2.16.91 2.31c.11.15 1.57 2.4 3.8 3.36.53.23.94.37 1.27.47.53.17 1.02.14 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.26z"/></svg>
+</a>
+
+<script>
+  (function () {
+    var brief = document.getElementById('brief');
+    var wa = document.getElementById('whatsapp-link');
+    var email = document.getElementById('email-link');
+    if (!brief || !wa || !email) return;
+    var waBase = "Hi Ajex, I'd like to talk about my project.";
+    var emailSubject = "Project enquiry via Ajex website";
+    brief.addEventListener('input', function () {
+      var extra = brief.value.trim();
+      var waText = extra ? waBase + ' ' + extra : waBase;
+      wa.href = 'https://wa.me/2349037616671?text=' + encodeURIComponent(waText);
+      var body = extra ? encodeURIComponent(extra) : '';
+      email.href = 'mailto:adelekejoshuan1@gmail.com?subject=' + encodeURIComponent(emailSubject) + (body ? '&body=' + body : '');
+    });
+  })();
+
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var target = document.getElementById('typed-kicker');
+    if (!target) return;
+    if (reduceMotion || typeof Typed === 'undefined') {
+      target.textContent = 'NOW BOOKING — Q4 2026';
+      return;
+    }
+    new Typed('#typed-kicker', {
+      strings: [
+        'NOW BOOKING — Q4 2026',
+        'WEBSITES. BRANDING. VISIBILITY.',
+        'BUILD. BE SEEN. GROW.'
+      ],
+      typeSpeed: 32,
+      backSpeed: 18,
+      backDelay: 1600,
+      startDelay: 500,
+      loop: true,
+      smartBackspace: true
+    });
+  })();
+
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var panel = document.getElementById('mobile-nav');
+    if (!btn || !panel) return;
+    function closeMenu() {
+      panel.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    btn.addEventListener('click', function () {
+      var open = panel.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
+
+  (function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    function getStored() {
+      try { return window.localStorage.getItem('ajex-theme'); } catch (err) { return null; }
+    }
+    function setStored(val) {
+      try { window.localStorage.setItem('ajex-theme', val); } catch (err) { /* ignore */ }
+    }
+    function systemPrefersDark() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    }
+
+    var stored = getStored();
+    var initial = stored || (systemPrefersDark() ? 'dark' : 'light');
+    applyTheme(initial);
+
+    toggle.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      setStored(next);
+    });
+  })();
+
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var fineHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (reduceMotion || !fineHover) return;
+
+    // Cursor-following glow on the grid background
+    var root = document.documentElement;
+    window.addEventListener('mousemove', function (e) {
+      root.style.setProperty('--mx', e.clientX + 'px');
+      root.style.setProperty('--my', e.clientY + 'px');
+      if (!document.body.classList.contains('glow-ready')) {
+        document.body.classList.add('glow-ready');
+      }
+    }, { passive: true });
+
+
+    // Magnetic pull on primary CTA buttons
+    var magneticEls = document.querySelectorAll('.magnetic');
+    magneticEls.forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        var relX = e.clientX - (r.left + r.width / 2);
+        var relY = e.clientY - (r.top + r.height / 2);
+        el.style.transform = 'translate(' + relX * 0.3 + 'px,' + relY * 0.3 + 'px)';
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.transform = '';
+      });
+    });
+  })();
+
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
