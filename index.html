@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ajex — Build. Be Seen. Grow.</title>
+<title>Ajex — Websites, Branding &amp; Online Visibility for Small Businesses</title>
+<meta name="description" content="Ajex Digital Growth Agency builds premium websites, brand identities, and online visibility for small businesses. Fixed pricing, direct access, fast turnaround.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://heisajay.github.io/Ajex--website/">
+<meta name="theme-color" content="#2B4DA8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%232B4DA8'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23F2EFE6' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ajex Digital Growth Agency — Websites, Branding & Online Visibility">
+<meta property="og:description" content="Premium websites, brand identities, and online visibility for small businesses — fixed pricing, direct access, fast turnaround.">
+<meta property="og:url" content="https://heisajay.github.io/Ajex--website/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajex Digital Growth Agency — Websites, Branding & Online Visibility">
+<meta name="twitter:description" content="Premium websites, brand identities, and online visibility for small businesses — fixed pricing, direct access, fast turnaround.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -167,7 +181,45 @@
   }
   .nav-cta { transition: background-color .22s ease, color .22s ease; }
   .nav-cta:hover { background: var(--ink); color: var(--paper); }
-  .menu-btn { display: none; background: none; border: 1px solid var(--border); border-radius: var(--radius-s); padding: 8px 10px; }
+  .skip-link {
+    position: absolute;
+    top: -48px;
+    left: 12px;
+    z-index: 100;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 16px;
+    border-radius: var(--radius-s);
+    text-decoration: none;
+    font-size: 14px;
+    transition: top .2s ease;
+  }
+  .skip-link:focus { top: 12px; }
+
+  .menu-btn {
+    display: none;
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-s);
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+    background: var(--paper);
+  }
+  .mobile-nav.is-open { display: flex; }
+  .mobile-nav a {
+    padding: 14px 28px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
 
   .theme-toggle { background: none; border: none; padding: 0; cursor: pointer; line-height: 0; }
   .theme-toggle-track {
@@ -491,8 +543,8 @@
   .cta h2 { color: #FBFAF6; }
   .cta .label { color: rgba(251,250,246,0.7); }
   .cta p { color: rgba(251,250,246,0.82); font-size: 16px; max-width: 44ch; }
-  .cta-form { display: flex; flex-direction: column; gap: 12px; }
-  .cta-form input, .cta-form textarea {
+  .contact-options { display: flex; flex-direction: column; gap: 12px; }
+  .contact-options textarea {
     background: rgba(251,250,246,0.08);
     border: 1px solid rgba(251,250,246,0.35);
     border-radius: var(--radius-s);
@@ -500,24 +552,37 @@
     color: #FBFAF6;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 14.5px;
+    resize: vertical;
+    transition: border-color .2s ease, background-color .2s ease;
   }
-  .cta-form input::placeholder, .cta-form textarea::placeholder { color: rgba(251,250,246,0.5); }
-  .cta-form button {
-    background: var(--amber);
-    color: #241704;
-    border: none;
+  .contact-options textarea::placeholder { color: rgba(251,250,246,0.5); }
+  .contact-options textarea:focus { border-color: var(--amber); background: rgba(251,250,246,0.14); outline: none; }
+  .btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: 13px 18px;
     border-radius: var(--radius-s);
     font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
     cursor: pointer;
-    margin-top: 4px;
     transition: transform .2s cubic-bezier(.22,.61,.36,1), box-shadow .2s ease;
   }
-  .cta-form button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -8px rgba(217,142,43,0.5); }
-  .cta-form input, .cta-form textarea { transition: border-color .2s ease, background-color .2s ease; }
-  .cta-form input:focus, .cta-form textarea:focus { border-color: var(--amber); background: rgba(251,250,246,0.14); outline: none; }
-  #form-status { font-size: 13px; min-height: 18px; }
+  .btn-contact.whatsapp { background: var(--amber); color: #241704; }
+  .btn-contact.whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -8px rgba(217,142,43,0.5); }
+  .btn-contact.email { background: rgba(251,250,246,0.08); color: #FBFAF6; border: 1px solid rgba(251,250,246,0.35); }
+  .btn-contact.email:hover { transform: translateY(-2px); background: rgba(251,250,246,0.14); }
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
 
   /* ---------- Footer ---------- */
   footer {
@@ -535,6 +600,26 @@
   .foot-links { display: flex; gap: 20px; }
   .foot-links a { font-size: 14px; color: var(--ink-soft); text-decoration: none; }
   .foot-links a:hover { color: var(--ink); }
+
+  /* ---------- Floating WhatsApp button ---------- */
+  .whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px -8px rgba(0,0,0,0.35);
+    z-index: 50;
+    text-decoration: none;
+    transition: transform .2s cubic-bezier(.22,.61,.36,1), box-shadow .2s ease;
+  }
+  .whatsapp-float:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 28px -8px rgba(0,0,0,0.4); }
 
   /* ---------- overflow safety for wide content ---------- */
   .scroll-x { overflow-x: auto; }
@@ -570,10 +655,12 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
   <div class="nav">
     <div class="logo">Ajex<span class="dot">.</span></div>
-    <nav class="links">
+    <nav class="links" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#why">Why Us</a>
       <a href="#work">Work</a>
@@ -590,21 +677,32 @@
           </span>
         </span>
       </button>
-      <a class="nav-cta" href="#contact">Start a project</a>
+      <a class="nav-cta" href="#contact">Start your project</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="1" y1="4" x2="17" y2="4"/><line x1="1" y1="9" x2="17" y2="9"/><line x1="1" y1="14" x2="17" y2="14"/></svg>
+      </button>
     </div>
   </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main>
+<main id="main-content">
   <section class="hero" style="border-top:none; padding-top:64px;">
     <div class="wrap hero-grid">
       <div>
         <span class="kicker"><span class="tick"></span><span id="typed-kicker"></span></span>
-        <h1>We draft the plan your small business grows on<em>.</em></h1>
-        <p class="hero-sub">Ajex builds websites, brand identities, and online visibility for small businesses that are ready to stop looking homemade — without agency overhead or agency timelines.</p>
+        <h1>Websites and brand identities built to earn trust<em>.</em></h1>
+        <p class="hero-sub">Ajex is a digital growth agency for small businesses — premium web design, brand identity, and online visibility, planned clearly and delivered without agency bloat.</p>
         <div class="hero-actions">
-          <a class="btn-primary magnetic" href="#contact">Start a project</a>
-          <a class="btn-ghost" href="#services">See what we build</a>
+          <a class="btn-primary magnetic" href="#contact">Start your project</a>
+          <a class="btn-ghost" href="#work">See our work</a>
         </div>
       </div>
       <div class="diagram" aria-hidden="true">
@@ -619,7 +717,7 @@
           <line x1="60" y1="215" x2="180" y2="215" stroke="var(--border)" stroke-width="1"/>
           <line x1="60" y1="228" x2="150" y2="228" stroke="var(--border)" stroke-width="1"/>
           <rect x="60" y="264" width="240" height="36" rx="2" fill="none" stroke="var(--blue)" stroke-width="1.2" stroke-dasharray="3 3"/>
-          <text x="72" y="286" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-soft)">CTA — “Get started”</text>
+          <text x="72" y="286" font-family="IBM Plex Mono" font-size="11" fill="var(--ink-soft)">CTA — "Get started"</text>
           <g stroke="var(--amber)" stroke-width="1">
             <line x1="40" y1="312" x2="360" y2="312" pathLength="1" data-draw style="--dd:1.3s"/>
             <line x1="40" y1="306" x2="40" y2="318"/>
@@ -840,15 +938,20 @@
         <div>
           <span class="label">/// START A PROJECT</span>
           <h2>Tell us what you're building</h2>
-          <p>Send a few lines about your business and what's not working with your current online presence — or if you don't have one yet, what you're picturing.</p>
+          <p>Reach out directly on WhatsApp or email — whichever's easier. Add a line about your business below and it'll carry over into your message.</p>
         </div>
-        <form class="cta-form" onsubmit="handleSubmit(event)">
-          <input type="text" placeholder="Name" required aria-label="Name">
-          <input type="email" placeholder="Email" required aria-label="Email">
-          <textarea placeholder="A bit about your business" rows="3" aria-label="Message"></textarea>
-          <button type="submit" class="magnetic">Send it over</button>
-          <div id="form-status" role="status"></div>
-        </form>
+        <div class="contact-options">
+          <label for="brief" class="sr-only">Optional project brief</label>
+          <textarea id="brief" placeholder="Optional: a line or two about your business and what you need" rows="3"></textarea>
+          <a id="whatsapp-link" class="btn-contact whatsapp magnetic" href="https://wa.me/2349037616671?text=Hi%20Ajex%2C%20I%27d%20like%20to%20talk%20about%20my%20project." target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.04 3 8.9 8.9 0 0 0 3.2 11.9a8.8 8.8 0 0 0 1.2 4.5L3 21l4.7-1.2a8.9 8.9 0 0 0 4.3 1.1h.03a8.9 8.9 0 0 0 8.9-8.9 8.8 8.8 0 0 0-2.63-6.3zm-5.56 13.7h-.02a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.73.75-2.73-.18-.28a7.4 7.4 0 0 1-1.13-3.94 7.4 7.4 0 0 1 7.4-7.4 7.4 7.4 0 0 1 7.4 7.42 7.4 7.4 0 0 1-7.38 7.39zm4.05-5.54c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.1-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.59.28-.2.22-.78.76-.78 1.86s.8 2.16.91 2.31c.11.15 1.57 2.4 3.8 3.36.53.23.94.37 1.27.47.53.17 1.02.14 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.26z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a id="email-link" class="btn-contact email magnetic" href="mailto:adelekejoshuan1@gmail.com?subject=Project%20enquiry%20via%20Ajex%20website">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            Email us
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -865,13 +968,26 @@
   </div>
 </footer>
 
+<a class="whatsapp-float magnetic" href="https://wa.me/2349037616671?text=Hi%20Ajex%2C%20I%27d%20like%20to%20talk%20about%20my%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with Ajex on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.04 3 8.9 8.9 0 0 0 3.2 11.9a8.8 8.8 0 0 0 1.2 4.5L3 21l4.7-1.2a8.9 8.9 0 0 0 4.3 1.1h.03a8.9 8.9 0 0 0 8.9-8.9 8.8 8.8 0 0 0-2.63-6.3zm-5.56 13.7h-.02a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.73.75-2.73-.18-.28a7.4 7.4 0 0 1-1.13-3.94 7.4 7.4 0 0 1 7.4-7.4 7.4 7.4 0 0 1 7.4 7.42 7.4 7.4 0 0 1-7.38 7.39zm4.05-5.54c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.1-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.59.28-.2.22-.78.76-.78 1.86s.8 2.16.91 2.31c.11.15 1.57 2.4 3.8 3.36.53.23.94.37 1.27.47.53.17 1.02.14 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.04-.05-.1-.2-.15-.42-.26z"/></svg>
+</a>
+
 <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    var status = document.getElementById('form-status');
-    status.textContent = "Thanks — this is a demo form, so nothing was actually sent yet. Connect it to your email or a form service to go live.";
-    e.target.reset();
-  }
+  (function () {
+    var brief = document.getElementById('brief');
+    var wa = document.getElementById('whatsapp-link');
+    var email = document.getElementById('email-link');
+    if (!brief || !wa || !email) return;
+    var waBase = "Hi Ajex, I'd like to talk about my project.";
+    var emailSubject = "Project enquiry via Ajex website";
+    brief.addEventListener('input', function () {
+      var extra = brief.value.trim();
+      var waText = extra ? waBase + ' ' + extra : waBase;
+      wa.href = 'https://wa.me/2349037616671?text=' + encodeURIComponent(waText);
+      var body = extra ? encodeURIComponent(extra) : '';
+      email.href = 'mailto:adelekejoshuan1@gmail.com?subject=' + encodeURIComponent(emailSubject) + (body ? '&body=' + body : '');
+    });
+  })();
 
   (function () {
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -893,6 +1009,26 @@
       startDelay: 500,
       loop: true,
       smartBackspace: true
+    });
+  })();
+
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var panel = document.getElementById('mobile-nav');
+    if (!btn || !panel) return;
+    function closeMenu() {
+      panel.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    btn.addEventListener('click', function () {
+      var open = panel.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
     });
   })();
 
@@ -932,7 +1068,6 @@
     var fineHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     if (reduceMotion || !fineHover) return;
 
-    // Cursor-following glow on the grid background
     var root = document.documentElement;
     window.addEventListener('mousemove', function (e) {
       root.style.setProperty('--mx', e.clientX + 'px');
@@ -942,8 +1077,6 @@
       }
     }, { passive: true });
 
-
-    // Magnetic pull on primary CTA buttons
     var magneticEls = document.querySelectorAll('.magnetic');
     magneticEls.forEach(function (el) {
       el.addEventListener('mousemove', function (e) {
